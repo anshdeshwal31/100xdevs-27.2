@@ -6,4 +6,16 @@ const adapter = new PrismaNeon({
   connectionString: process.env.DATABASE_URL!,
 })
 
-export const prisma = new PrismaClient({ adapter })
+ const prisma = new PrismaClient({ adapter })
+ export default prisma
+
+ const checkConnection = async() => { 
+  try {
+    await prisma.$connect();
+    console.log("db connected successfully");
+  } catch (error) {
+    console.log("couldn't connect the db",error);
+  }
+  }
+
+  await checkConnection()

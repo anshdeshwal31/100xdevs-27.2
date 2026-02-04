@@ -1,0 +1,20 @@
+{
+  "name": "backend",
+  "module": "index.ts",
+  "type": "module",
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "scripts": {
+    "dev":"bun ./index.ts",
+    "build":"tsc --b"
+  },
+  "dependencies": {
+    "@repo/prisma": "workspace:*",
+    "@types/express": "^5.0.6",
+    "express": "^5.2.1"
+  }
+}
