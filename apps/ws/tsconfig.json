@@ -1,4 +1,6 @@
 {
+  "extends":"../../packages/typescript-config/base.json",
+  
   "compilerOptions": {
     // Enable latest features
     "lib": ["ESNext", "DOM"],
@@ -10,6 +12,7 @@
     "rootDir": "./src",
     "outDir": "./dist",
 
+    
     // Bundler mode
     "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
