@@ -1,7 +1,17 @@
 "use client"
 import {useState} from "react"
 import axios from "axios"
+import z from 'zod'
 
+const loginUser = async (data)=> {
+    const schema = z.object({
+        email : z.string() ,
+        password : z.string()
+    })
+
+    schema.safeParse(data)
+    
+}
 const createUser = async(firstname:string|undefined,lastname:string|undefined) => { 
     try {
       console.log("process to create user initiated")
